@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using SalesWebMvc.Models;
 using SalesWebMvc.Models.Enums;
 
@@ -16,65 +18,24 @@ namespace SalesWebMvc.Data
 
         public void Seed()
         {
-            if(_context.Department.Any() ||
-               _context.Seller.Any() ||
-               _context.SalesRecord.Any())
-                return;//O banco de dados já foi populado
+            if (_context.Department.Any() ||
+                _context.Seller.Any() ||
+                _context.SalesRecord.Any())
+            {
+                return; // DB has been seeded
+            }
 
             Department d1 = new Department(1, "Computers");
             Department d2 = new Department(2, "Electronics");
             Department d3 = new Department(3, "Fashion");
             Department d4 = new Department(4, "Books");
 
-            Seller s1 = new Seller {
-                Id = 1,
-                Name = "Bob",
-                Email = "bob@gmail.com",
-                BirthDate = new DateTime(1999, 4, 21),
-                BaseSalary = 1000,
-                Department = d1
-            };
-
-            Seller s2 = new Seller {
-                Id = 2,
-                Name = "Maria Júlia",
-                Email = "maju@gmail.com",
-                BirthDate = new DateTime(1989, 3, 2),
-                BaseSalary = 3500,
-                Department = d2
-            };
-            Seller s3 = new Seller {
-                Id = 3,
-                Name = "Alex Gouveia",
-                Email = "alecgol@gmail.com",
-                BirthDate = new DateTime(1997, 3, 21),
-                BaseSalary = 2200,
-                Department = d1
-            };
-            Seller s4 = new Seller {
-                Id = 4,
-                Name = "Marta da Silva",
-                Email = "martasilva@gmail.com",
-                BirthDate = new DateTime(1987, 1, 9),
-                BaseSalary = 3000,
-                Department = d4
-            };
-            Seller s5 = new Seller {
-                Id = 5,
-                Name = "Roberto Carlos",
-                Email = "robcarlos@gmail.com",
-                BirthDate = new DateTime(2001, 3, 29),
-                BaseSalary = 4000,
-                Department = d3
-            };
-            Seller s6 = new Seller {
-                Id = 6,
-                Name = "Roberto Santos",
-                Email = "robsantos@gmail.com",
-                BirthDate = new DateTime(1982, 12, 22),
-                BaseSalary = 3000,
-                Department = d2
-            };
+            Seller s1 = new Seller(1, "Bob Brown", "bob@gmail.com", new DateTime(1998, 4, 21), 1000.0, d1);
+            Seller s2 = new Seller(2, "Maria Green", "maria@gmail.com", new DateTime(1979, 12, 31), 3500.0, d2);
+            Seller s3 = new Seller(3, "Alex Grey", "alex@gmail.com", new DateTime(1988, 1, 15), 2200.0, d1);
+            Seller s4 = new Seller(4, "Martha Red", "martha@gmail.com", new DateTime(1993, 11, 30), 3000.0, d4);
+            Seller s5 = new Seller(5, "Donald Blue", "donald@gmail.com", new DateTime(2000, 1, 9), 4000.0, d3);
+            Seller s6 = new Seller(6, "Alex Pink", "bob@gmail.com", new DateTime(1997, 3, 4), 3000.0, d2);
 
             SalesRecord r1 = new SalesRecord(1, new DateTime(2018, 09, 25), 11000.0, SaleStatus.Billed, s1);
             SalesRecord r2 = new SalesRecord(2, new DateTime(2018, 09, 4), 7000.0, SaleStatus.Billed, s5);
