@@ -40,8 +40,7 @@ namespace SalesWebMvc
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<SalesWebMvcContext>(options =>
-                    options.UseMySql(Configuration.GetConnectionString("SalesWebMvcContext"), builder =>
-                        builder.MigrationsAssembly("SalesWebMvc")));
+                    options.UseInMemoryDatabase(databaseName: "Hector"));
 
             services.AddScoped<SeedingService>();
             services.AddScoped<SellerService>();
@@ -69,7 +68,7 @@ namespace SalesWebMvc
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
