@@ -18,6 +18,7 @@ namespace SalesWebMvc.Models
 
         public SaleStatus Status { get; set; }
 
+        [Display(Name = "Vendedor")]
         public Seller Seller { get; set; }
 
         public SalesRecord()

@@ -1,7 +1,8 @@
 ﻿@model SalesWebMvc.Models.Seller
 
 <div>
-    <h4>Seller</h4>
+    <br />
+    <h4>Detalhar vendedor</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -37,6 +38,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-success">Edit</a> 
-    <a asp-action="Index" class="btn btn-default">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a> 
+    <a asp-action="Index" class="btn btn-default">Voltar</a>
 </div>

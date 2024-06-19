@@ -30,12 +30,12 @@ namespace SalesWebMvc.Data
             Department d3 = new Department(301, "Moda");
             Department d4 = new Department(491, "Livraria");
 
-            Seller s1 = new Seller(111, "Bob Brown", "bob@gmail.com", new DateTime(1998, 4, 21), 1000.0, d1);
-            Seller s2 = new Seller(212, "Maria Green", "maria@gmail.com", new DateTime(1979, 12, 31), 3500.0, d2);
-            Seller s3 = new Seller(312, "Alex Grey", "alex@gmail.com", new DateTime(1988, 1, 15), 2200.0, d1);
-            Seller s4 = new Seller(412, "Martha Red", "martha@gmail.com", new DateTime(1993, 11, 30), 3000.0, d4);
-            Seller s5 = new Seller(512, "Donald Blue", "donald@gmail.com", new DateTime(2000, 1, 9), 4000.0, d3);
-            Seller s6 = new Seller(612, "Alex Pink", "bob@gmail.com", new DateTime(1997, 3, 4), 3000.0, d2);
+            Seller s1 = new Seller(111, "Roberto", "roberto@gmail.com", new DateTime(1998, 4, 21), 1000.0, d1);
+            Seller s2 = new Seller(212, "Maria", "maria@gmail.com", new DateTime(1979, 12, 31), 3500.0, d2);
+            Seller s3 = new Seller(312, "Alex", "alex@gmail.com", new DateTime(1988, 1, 15), 2200.0, d1);
+            Seller s4 = new Seller(412, "Marta", "marta@gmail.com", new DateTime(1993, 11, 30), 3000.0, d4);
+            Seller s5 = new Seller(512, "Ronaldo", "ronaldo@gmail.com", new DateTime(2000, 1, 9), 4000.0, d3);
+            Seller s6 = new Seller(612, "Ana", "ana@gmail.com", new DateTime(1997, 3, 4), 3000.0, d2);
 
             SalesRecord r1 = new SalesRecord(123, new DateTime(2018, 09, 25), 11000.0, SaleStatus.Faturado, s1);
             SalesRecord r2 = new SalesRecord(223, new DateTime(2018, 09, 4), 7000.0, SaleStatus.Faturado, s5);

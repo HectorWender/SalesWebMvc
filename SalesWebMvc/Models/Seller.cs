@@ -31,8 +31,13 @@ namespace SalesWebMvc.Models
         [Range(100, 50000, ErrorMessage = "O {0} deve ser entre {1} e {2}")]
         [DisplayFormat(DataFormatString ="{0:F2}")]
         public double BaseSalary { get; set; }
+
+        [Display(Name = "Departmento")]
         public Department Department { get; set; }
+
+        [Display(Name = "Departmento")]
         public int DepartmentId { get; set; }
+
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
         public Seller() { }
